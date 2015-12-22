@@ -1,0 +1,26 @@
+.shoppingbasket {
+	border-radius: 8px;
+	margin-top: 30px;
+	padding-top: 5px;
+	background-color: rgba(240,240,240,0.7);
+	box-shadow: 2px 4px 10px black;
+}
+
+.shoppingbasket > h3 {
+	text-align: center;
+	font-family: 'Red Moon Rising';
+	font-size: 2.4em;
+	color: rgb(220,220,220);
+	text-shadow:0px 0px 6px black;;
+}
+
+.product__user {
+	border: 4px solid gray;
+	border-radius: 4px;
+}
+
+.product__user > p {
+	text-align: center;
+	font-family: 'Questrial';
+	font-size: 18px;
+}

@@ -1,0 +1,22 @@
+.news__1 {
+	border-radius: 8px;
+	margin-top: 30px;
+	padding: 10px;
+	background-color: rgba(240,240,240,0.7);
+	box-shadow: 2px 4px 10px black;
+}
+
+.news__1__subtitle {
+	font-family: 'Questrial';
+	font-size: 22px;
+}
+
+.news__1__main {
+	font-family: 'Questrial';
+	font-size: 22px;
+	color: rgb(100,100,100);
+}
+
+.player {
+	height: 400px;
+}

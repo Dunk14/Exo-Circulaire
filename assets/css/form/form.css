@@ -1,0 +1,54 @@
+table {
+	margin-top: 10px;
+}
+
+.client {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.utilisateur {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+label {
+	font-family: 'Red Moon Rising';
+	font-size: 2em;
+	color:rgb(215,215,215);
+	text-shadow: 2px 2px 4px black;
+}
+
+.myButton {
+	text-align: center;
+	margin-top: 10px;
+	margin-left: 30px;
+}
+
+.titre {
+	font-family: 'Red Moon Rising';
+	font-size: 2.6em;
+	text-align: center;
+	color:rgb(215,215,215);
+	text-shadow: 0px 0px 20px rgb(150,150,150);
+}
+
+h2 {
+	font-family: 'Desminore';
+	font-size: 1.4em;
+	text-align: center;
+	color:rgb(0,0,0);
+	text-shadow: 2px 0px 4px rgb(255,255,255);
+}
+
+input {
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-color: rgba(50,50,50,0.6);
+	font-family: 'Questrial';
+	color: white;
+	text-align: center;
+	font-size: 16px;
+	border: 1px solid rgba(235,235,235,0.4);
+}

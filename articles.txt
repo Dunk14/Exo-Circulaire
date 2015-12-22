@@ -1,0 +1,1 @@
+INSERT INTO `exo-circulaire`.`articles` (`id_article`, `nom`, `diametre`, `masse`, `gravity`, `temperature`, `atm`, `revolution`, `axial`, `lunes`, `longitude`, `latitude`, `id_desc`) VALUES (NULL, 'Mars', '6792', '6418', '0.379', '-63', '0.012', '686', NULL, '1', NULL, NULL, NULL)
