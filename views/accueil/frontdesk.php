@@ -21,7 +21,7 @@
 	        	<div class="news">
 	        		<div class="news__1">
 	        			<h2>News</h2>
-	        			<iframe allowfullscreen="" autoplay="0" class="player" frameborder="0" src="http://www.maxisciences.com/internal/w5xaa0Ld3cE0vRORQ4watA/1" webkitallowfullscreen="true" mozallowfullscreen="true" width="100%" height="100%"></iframe>
+	        			<!--<iframe allowfullscreen="" autoplay="0" class="player" frameborder="0" src="http://www.maxisciences.com/internal/w5xaa0Ld3cE0vRORQ4watA/1" webkitallowfullscreen="true" mozallowfullscreen="true" width="100%" height="100%"></iframe>-->
 	        			<p class="news__1__subtitle">Une nouvelle étude publiée dans la revue Nature révèle l’existence d’un gigantesque trou noir qui,
 	        			selon les auteurs, aurait grandit rapidement, atteignant une masse équivalent à 12 milliards de Soleil.</p>
 
