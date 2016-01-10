@@ -7,7 +7,8 @@
          			<a class="header__menu" href="index.php">Accueil</a>
 					<a class="header__menu" href="index.php?c=article&a=view">Acheter</a>
 					<a class="header__menu" href="index.php?c=utilisateur&a=insert">S'enregistrer</a>
-					<a class="header__menu" href="index.php?c=utilisateur&a=connect">Se connecter</a>
+					<a class="header__menu" id="connect">Se connecter
+					</a>
 					<a class="header__menu" href="Contact.php">Contact</a>
 				</div>
 			</div>

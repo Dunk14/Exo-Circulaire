@@ -1,14 +1,14 @@
 @font-face {
 	font-family: 'Red Moon Rising';
-	src: url('../../fonts/Red Moon Rising.otf');
+	src: url('../../fonts/redmoonrising.otf');
 }
 
 @font-face {
 	font-family: 'Questrial';
-	src: url('../../fonts/Questrial-Regular.ttf');
+	src: url('../../fonts/questrial.ttf');
 }
 
 @font-face {
-	font-family: 'Desminore';
-	src: url('../../fonts/desminore.otf');
+	font-family: 'Alba';
+	src: url('../../fonts/alba.ttf');
 }
