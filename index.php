@@ -32,6 +32,11 @@
 		$controller_utilisateur = new controller_utilisateur();
 		$controller_utilisateur->connectUtilisateur();
 	}
+	elseif ($controller == "utilisateur" && $action == "disconnect") {
+		require_once($_SERVER['DOCUMENT_ROOT'].'exo-circulaire/controllers/utilisateur.php');
+		$controller_utilisateur = new controller_utilisateur();
+		$controller_utilisateur->disconnectUtilisateur();
+	}
 	elseif ($controller == "" && $action == "") {
 		require_once($_SERVER['DOCUMENT_ROOT'].'exo-circulaire/views/accueil/frontdesk.php');
 	}

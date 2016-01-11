@@ -35,12 +35,8 @@
 						</tr>
 						<tr>
 							<td><label for="cp">Code Postal: </label></td>
-							<td><input type="number" name="cp" id="cp" size="5" maxlength="5" min="0" max="99999" required="required"></td>
+							<td><input type="text" name="cp" id="cp" size="5" maxlength="5" required="required"></td>
 						</tr>
-						<!-- <tr>
-							<td><label for="tel">Telephone: </label></td>
-							<td><input type="text" name="tel" id="tel" size="15" maxlength="13" required="required"></td>
-						</tr> -->
 					</table>
 					<table cellspacing="8" class="utilisateur">
 						<tr>
@@ -62,8 +58,8 @@
 							<td><input type="password" name="mdp_confirm" id="mdp_confirm" size="25" maxlength="255" required="required"></td>
 						</tr>						
 						<tr>
-							<td><input type="submit" value="S'enregistrer" class="myButton"></td>
-							<td><input type="reset" value="Réinitialiser" class="myButton"></td>
+							<td><input type="submit" value="S'enregistrer" class="myButtonLarge"></td>
+							<td><input type="reset" value="Réinitialiser" class="myButtonLarge"></td>
 						</tr>
 					</table>
 				</form>

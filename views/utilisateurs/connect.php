@@ -28,8 +28,8 @@
 					</table>
 					<table cellspacing="8" class="utilisateur">
 						<tr>
-							<td><input type="submit" value="Se connecter" class="myButton"></td>
-							<td><input type="reset" value="Réinitialiser" class="myButton"></td>
+							<td><input type="submit" value="Se connecter" class="myButtonLarge"></td>
+							<td><input type="reset" value="Réinitialiser" class="myButtonLarge"></td>
 						</tr>
 					</table>
 				</form>

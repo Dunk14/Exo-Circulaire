@@ -1,4 +1,4 @@
-.myButton {
+.myButtonLarge {
 	background-color: rgba(255,255,255,0);
 	border-radius:28px;
 	border:0px solid #18ab29;
@@ -13,11 +13,35 @@
 	overflow: hidden;
 	transition: all 0.2s ease-in-out;
 }
-.myButton:hover {
+.myButtonLarge:hover {
 	background-color: rgba(255,255,255,0.2);
 	box-shadow: 0px 0px 10px white;
 }
-.myButton:active {
+.myButtonLarge:active {
+	position:relative;
+	top:2px;
+}
+
+.myButtonMini {
+	background-color: rgba(255,255,255,0);
+	border-radius:28px;
+	border:0px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Questrial';
+	font-size:1em;
+	padding:6px 20px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+	overflow: hidden;
+	transition: all 0.2s ease-in-out;
+}
+.myButtonMini:hover {
+	background-color: rgba(255,255,255,0.2);
+	box-shadow: 0px 0px 10px white;
+}
+.myButtonMini:active {
 	position:relative;
 	top:2px;
 }
