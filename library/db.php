@@ -6,6 +6,7 @@
 
 		private function __construct() {
 			$this->connexionBDD = new PDO("mysql:host=localhost;dbname=exo-circulaire", "root","");
+			$this->connexionBDD->exec('SET NAMES UTF8');
 		}
 
 		public static function getInstance() {

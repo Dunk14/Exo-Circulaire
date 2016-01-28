@@ -31,12 +31,12 @@ label {
 	font-family: 'Red Moon Rising';
 	font-size: 2.6em;
 	text-align: center;
-	color:rgb(215,215,215);
-	text-shadow: 0px 0px 20px rgb(150,150,150);
+	color:rgb(235,235,235);
+	text-shadow: 0px 0px 20px white;
 }
 
 h2 {
-	font-family: 'Alba';
+	font-family: 'Questrial';
 	font-size: 1.4em;
 	text-align: center;
 	color:rgb(0,0,0);
@@ -52,4 +52,56 @@ input {
 	text-align: center;
 	font-size: 16px;
 	border: 1px solid rgba(235,235,235,0.4);
+}
+
+textarea {
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-color: rgba(50,50,50,0.6);
+	font-family: 'Questrial';
+	color: white;
+	text-align: center;
+	font-size: 16px;
+	border: 1px solid rgba(235,235,235,0.4);
+}
+
+#form {
+	padding-left: 150px;
+	text-align: left;
+}
+
+#submit {
+	margin-left: 150px;
+	margin-top: 20px;
+}
+
+th {
+	font-family: 'Questrial';
+	font-size: 1.6em;
+	color: white;
+	padding-right: 50px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 2.4em;
+	font-family: 'Red Moon Rising';
+	color: rgb(220,220,220);
+	text-shadow: 0px 0px 10px white;
+}
+
+.admin {
+	font-family: 'Questrial';
+	font-size: 1.4em;
+	margin-top: 25px;
+	text-align: center;
+}
+
+.admin a {
+	color: white;
+	text-decoration: none;
+}
+
+.admin:hover {
+	text-shadow: 0px 0px 10px white;
 }

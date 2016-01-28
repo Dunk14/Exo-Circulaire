@@ -35,7 +35,7 @@
 						</tr>
 						<tr>
 							<td><label for="cp">Code Postal: </label></td>
-							<td><input type="text" name="cp" id="cp" size="5" maxlength="5" required="required"></td>
+							<td><input type="text" name="cp" id="cp" size="8" maxlength="5" required="required"></td>
 						</tr>
 					</table>
 					<table cellspacing="8" class="utilisateur">

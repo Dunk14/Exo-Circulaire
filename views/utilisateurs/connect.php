@@ -32,6 +32,7 @@
 							<td><input type="reset" value="Réinitialiser" class="myButtonLarge"></td>
 						</tr>
 					</table>
+					<div class="admin"><a href="index.php?c=utilisateur&a=connectadmin">Connexion Administrateur</a></div>
 				</form>
 			</div>
 		</div>

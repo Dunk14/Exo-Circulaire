@@ -1,0 +1,33 @@
+h1 {
+	text-align: center;
+	font-size: 2.4em;
+	font-family: 'Red Moon Rising';
+	color: white;
+	text-shadow: 0px 0px 10px white;
+}
+
+#article {
+	display: flex;
+	border: 2px solid white;
+	border-radius: 20px;
+	background-color: rgba(220,220,220,0.6);
+	font-family: 'Questrial';
+	font-size: 1.3em;
+	text-shadow: 2px 2px 4px white;
+	text-align: center;
+	margin-top: 30px;
+}
+
+#article h2 {
+	text-align: center;
+}
+
+#article li {
+	list-style-type: none;
+}
+
+#image {
+	display: inline-block;
+	text-align: center;
+	margin-top: 60px;
+}

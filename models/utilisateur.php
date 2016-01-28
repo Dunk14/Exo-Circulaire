@@ -19,6 +19,16 @@
 			}
 		}
 
+		public function existMailUpdate ($mail,$idClient) {
+			$query = 'SELECT COUNT(*) FROM clients WHERE mail = "'.$mail.'" AND id_client != "'.$idClient.'";';
+			$existMail = $this->db->get($query);
+			if ($existMail[0] == 1) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+
 		public function getIdClient ($mail) {
 			$query = 'SELECT id_client FROM clients WHERE mail = "'.$mail.'";';
 			$idClient = $this->db->get($query);
@@ -31,11 +41,11 @@
 			return $idUtilisateur;
 		}
 
-		public function addUtilisateur ($nom,$prenom,$ville,$adresse,$cp,$mail,$pseudo,$mdp) {
+		public function addUtilisateur ($nom,$prenom,$ville,$adresse,$cp,$mail,$pseudo,$mdp,$dateArrivee) {
 
 			// Requête d'insertion de la table client
-			$queryUtilisateur = 'INSERT INTO clients (nom,prenom,ville,adresse,cp,mail) 
-			VALUES (:nom,:prenom,:ville,:adresse,:cp,:mail);';
+			$queryUtilisateur = 'INSERT INTO clients (nom,prenom,ville,adresse,cp,mail,dateArrivee) 
+			VALUES (:nom,:prenom,:ville,:adresse,:cp,:mail,:dateArrivee);';
 
 			// Requête d'insertion de la table utilisateurs
 			$queryClient = 'INSERT INTO utilisateurs (pseudo,mdp)
@@ -47,7 +57,8 @@
 					'ville' => $ville,
 					'adresse' => $adresse,
 					'cp' => $cp,
-					'mail' => $mail
+					'mail' => $mail,
+					'dateArrivee' => $dateArrivee
 					);
 
 			$tabClient = array(
@@ -66,10 +77,9 @@
 			// Requête d'insertion pour relier les 2 occurrences des tables
 			$queryForeign = 'UPDATE clients SET id_utilisateur = '.$idUtilisateur[0].' WHERE id_client = '.$idClient[0].';';
 			$resultatForeign = $this->db->get($queryForeign);
-
-			header("Location:".$_SERVER['DOCUMENT_ROOT']."exo-circulaire/index.php");
 		}
 
+		// Fonction permettant de se connecter 
 		public function connectUtilisateur ($pseudo,$mdp) {
 
 			// Préparation des requêtes 
@@ -79,10 +89,10 @@
 			// Exécution des requêtes
 			$resultatPseudo = $this->db->get($queryPseudo);
 			$resultatMdp = $this->db->get($queryMdp);
-
+			
 			// Vérification de la concordance des résultats obtenus précédemment
-			if ($resultatPseudo[0] == 1 && $resultatMdp[0] == 1) {
-				require_once($_SERVER['DOCUMENT_ROOT'].'exo-circulaire/index.php');
+			// On regarde si le pseudo et le mdp rentrés sont dans la base
+			if ($resultatPseudo[0] >= 1 && $resultatMdp[0] >= 1) {
 
 				// Récupération de 'id_utilisateur'
 				$idUtilisateur = $this->getIdUtilisateur($pseudo);
@@ -95,6 +105,36 @@
 			else {
 				echo '<h2>Le pseudo et/ou le mot de passe n\'est/ne sont pas correct(s)';
 			}
+		}
+
+		// Fonction retournant le pseudo
+		public function getPseudo ($idUtilisateur) {
+			$queryPseudo = 'SELECT pseudo FROM utilisateurs WHERE id_utilisateur = '.$idUtilisateur.';';
+			$resultatPseudo = $this->db->get($queryPseudo);
+			return $resultatPseudo;
+		}
+
+		// Fonction retournant une commande détaillée, spécifique à un utilisateur
+		public function viewOrder ($idUtilisateur,$idCommande) {
+			$queryCommande = 'SELECT articles.nom, contient.prix FROM articles, contient, commandes 
+			WHERE articles.id_article = contient.id_article 
+			AND contient.id_commande = commandes.id_commande 
+			AND commandes.id_commande = '.$idCommande.'
+			AND commandes.id_utilisateur = '.$idUtilisateur.'
+			ORDER BY contient.prix;';
+			$resultatCommande = $this->db->getAll($queryCommande);
+
+			return $resultatCommande;
+		}
+
+		public function updateUtilisateur ($ville,$adresse,$cp,$mail,$idClient) {
+			$queryUpdate = 'UPDATE clients SET ville = "'.$ville.'", 
+			adresse = "'.$adresse.'", 
+			cp = "'.$cp.'", 
+			mail = "'.$mail.'"
+			WHERE id_client = '.$idClient.';';
+			$resultatUpdate = $this->db->get($queryUpdate);
+			return $resultatUpdate;
 		}
 
 	}

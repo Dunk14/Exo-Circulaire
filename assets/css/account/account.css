@@ -1,0 +1,88 @@
+.titre {
+	font-family: 'Red Moon Rising';
+	font-size: 2em;
+	text-align: center;
+	margin-top: 30px;
+	color: rgb(235,235,235);
+	text-shadow: 0px 0px 15px white;
+}
+
+.subtitle {
+	font-family: 'Red Moon Rising';
+	font-size: 2em;
+	text-align: center;
+	margin:0px; 
+	border: 2px groove gray;
+	border-radius: 10px;
+	text-shadow: 3px 6px 4px rgb(70,70,70);
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f6f8+0,d8e1e7+50,b5c6d0+51,e0eff9+100;Grey+Gloss+%232 */
+	background: rgb(242,246,248); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(242,246,248,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 51%, rgba(224,239,249,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(242,246,248,1) 0%,rgba(216,225,231,1) 50%,rgba(181,198,208,1) 51%,rgba(224,239,249,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(242,246,248,1) 0%,rgba(216,225,231,1) 50%,rgba(181,198,208,1) 51%,rgba(224,239,249,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9',GradientType=0 ); /* IE6-9 */
+}
+
+.user__infos {
+	border-radius: 8px;
+	margin-top: 15px;
+	padding: 5px;
+	background-color: rgba(240,240,240,0.7);
+	box-shadow: 2px 4px 10px black;
+	border: 2px solid white;
+	font-family: 'Questrial';
+	font-size: 1.2em;
+}
+
+.user__infos td {
+	padding-left: 10px;
+}
+
+.user__orders {
+	border-radius: 8px;
+	margin-top: 15px;
+	padding: 5px;
+	background-color: rgba(240,240,240,0.7);
+	box-shadow: 2px 4px 10px black;
+	border: 2px solid white;
+	font-family: 'Questrial';
+	font-size: 1.2em;
+	padding-bottom: 20px;
+}
+
+.title__orders {
+	font-size: 1.1em;
+	text-align: center;
+	margin-top: 15px;
+}
+
+.orders {
+	text-align: center;
+	padding: 10px;
+	border: 1px solid white;
+	border-radius: 10px;
+	background-color: rgba(70,70,70,0.6);
+	color: white;
+	transition: all 0.2s ease-in-out;
+	text-shadow: 2px 2px 6px black;
+	box-shadow: 2px 2px 4px black;
+}
+
+.orders:hover {
+	background-color: rgba(225,225,225,0.6);
+	color: rgb(40,40,40);
+	border-radius: 50px;
+}
+
+.order__time {
+	margin-right: 30px;
+}
+
+table {
+	margin-top: 20px;
+	text-align: left;
+}
+
+.myButtonMini {
+	margin-top: 10px;
+}
