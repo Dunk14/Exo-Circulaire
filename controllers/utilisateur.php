@@ -45,6 +45,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'exo-circulaire/models/utilisateur.php');
 						$_SESSION['prenom'] = $connectDetails['prenom'];
 						$_SESSION['dateArrivee'] = $dateArrivee;
 
+<<<<<<< HEAD
 						$getPseudo = new Model_Utilisateur();
 						$pseudo = $getPseudo->getPseudo($_SESSION['idUtilisateur']);
 
@@ -52,6 +53,12 @@ require_once($_SERVER['DOCUMENT_ROOT'].'exo-circulaire/models/utilisateur.php');
 
 						header("Location: index.php");
 						die();
+=======
+					}
+					else {
+						echo "<h2>Les mots de passe ne correspondent pas</h2>";
+					}
+>>>>>>> 4148416e195f0884eaa0a21107819f91c232a0ec
 				}
 				else {
 					echo "<h2>L'e-mail existe déjà dans la base de données</h2>";
@@ -71,6 +78,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'exo-circulaire/models/utilisateur.php');
 
 				$connect = new Model_Utilisateur();
 				$connectDetails = $connect->connectUtilisateur($pseudo,$mdp);
+<<<<<<< HEAD
 
 				if (!empty($connectDetails)) {
 					$_SESSION['idUtilisateur'] = $connectDetails['id_utilisateur'];
@@ -220,6 +228,10 @@ require_once($_SERVER['DOCUMENT_ROOT'].'exo-circulaire/models/utilisateur.php');
 				header("Location: exo-circulaire/views/index.php");
 				die();
 			}
+=======
+			}
+
+>>>>>>> 4148416e195f0884eaa0a21107819f91c232a0ec
 
 		}
 	}

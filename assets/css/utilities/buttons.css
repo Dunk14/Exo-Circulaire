@@ -23,26 +23,42 @@
 }
 
 .myButtonMini {
+<<<<<<< HEAD
 	background-color: rgba(100,100,100,0.4);
+=======
+	background-color: rgba(255,255,255,0);
+>>>>>>> 4148416e195f0884eaa0a21107819f91c232a0ec
 	border-radius:28px;
 	border:0px solid #18ab29;
 	display:inline-block;
 	cursor:pointer;
+<<<<<<< HEAD
 	color:black;
+=======
+	color:#ffffff;
+>>>>>>> 4148416e195f0884eaa0a21107819f91c232a0ec
 	font-family: 'Questrial';
 	font-size:1em;
 	padding:6px 20px;
 	text-decoration:none;
+<<<<<<< HEAD
 	overflow: hidden;
 	text-shadow: 0px 0px 10px white;
+=======
+	text-shadow:0px 1px 0px #2f6627;
+	overflow: hidden;
+>>>>>>> 4148416e195f0884eaa0a21107819f91c232a0ec
 	transition: all 0.2s ease-in-out;
 }
 .myButtonMini:hover {
 	background-color: rgba(255,255,255,0.2);
 	box-shadow: 0px 0px 10px white;
+<<<<<<< HEAD
 	color: white;
 	text-shadow: 0px 0px 10px black;
 	text-decoration: none;
+=======
+>>>>>>> 4148416e195f0884eaa0a21107819f91c232a0ec
 }
 .myButtonMini:active {
 	position:relative;
