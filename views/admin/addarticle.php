@@ -31,7 +31,7 @@
 				</tr>
 				<tr>
 					<th>Description: </th>
-					<td><textarea name="description" placeholder="255 caractères max" rows="10" cols="50" maxlength="255"></textarea>></td>
+					<td><textarea name="description" rows="10" cols="50" maxlength="64000"></textarea>></td>
 				</tr>
 				<tr>
 					<th>Diamètre: </th>
@@ -39,7 +39,7 @@
 				</tr>
 				<tr>
 					<th>Gravité: </th>
-					<td><input type="number" name="gravity" size="25" placeholder="Type: float"></td>
+					<td><input type="number" name="gravity" min="0" step="0.01" size="25" placeholder="Type: float"></td>
 				</tr>
 				<tr>
 					<th>Température: </th>
@@ -59,7 +59,7 @@
 				</tr>
 				<tr>
 					<th>URL Image: </th>
-					<td><input type="text" name="urlImage" size="50" maxlength="255" required="required" value="exo-circulaire\assets\img\products\"></td>
+					<td><input type="text" name="urlImage" size="50" maxlength="255" required="required" value="\exo-circulaire\assets\img\products\"></td>
 				</tr>
 				<tr>
 					<td colspan="2"><input type="submit" class="myButtonMini" id="submit"></td>
@@ -77,7 +77,7 @@
 				</tr>
 				<tr>
 					<th>Description: </th>
-					<td><textarea name="description" placeholder="255 caractères max" rows="10" cols="50" maxlength="255"></textarea>></td>
+					<td><textarea name="description" rows="10" cols="50" maxlength="64000"></textarea>></td>
 				</tr>
 				<tr>
 					<th>Diamètre: </th>
@@ -85,7 +85,7 @@
 				</tr>
 				<tr>
 					<th>Gravité: </th>
-					<td><input type="number" size="25" name="gravity" placeholder="Type: float"></td>
+					<td><input type="number" size="25" name="gravity" min="0" step="0.01" placeholder="Type: float"></td>
 				</tr>
 				<tr>
 					<th>Température: </th>
@@ -101,7 +101,7 @@
 				</tr>
 				<tr>
 					<th>URL Image: </th>
-					<td><input type="text" size="50" name="urlImage" maxlength="255" required="required" value="exo-circulaire\assets\img\products\"></td>
+					<td><input type="text" size="50" name="urlImage" maxlength="255" required="required" value="\exo-circulaire\assets\img\products\"></td>
 				</tr>
 				<tr>
 					<td colspan="2"><input type="submit" class="myButtonMini" id="submit"></td>
@@ -119,7 +119,7 @@
 				</tr>
 				<tr>
 					<th>Description: </th>
-					<td><textarea placeholder="255 caractères max" name="description" rows="10" cols="50" maxlength="255"></textarea>></td>
+					<td><textarea name="description" rows="10" cols="50" maxlength="64000"></textarea>></td>
 				</tr>
 				<tr>
 					<th>Diamètre: </th>
@@ -127,7 +127,7 @@
 				</tr>
 				<tr>
 					<th>Gravité: </th>
-					<td><input type="number" name="gravity" size="25" placeholder="Type: float"></td>
+					<td><input type="number" name="gravity" size="25" min="0" step="0.01" placeholder="Type: float"></td>
 				</tr>
 				<tr>
 					<th>Température: </th>
@@ -143,7 +143,7 @@
 				</tr>
 				<tr>
 					<th>URL Image: </th>
-					<td><input type="text" name="urlImage" size="50" maxlength="255" required="required" value="exo-circulaire\assets\img\products\"></td>
+					<td><input type="text" name="urlImage" size="50" maxlength="255" required="required" value="\exo-circulaire\assets\img\products\"></td>
 				</tr>
 				<tr>
 					<td colspan="2"><input type="submit" class="myButtonMini" id="submit"></td>
@@ -161,7 +161,7 @@
 				</tr>
 				<tr>
 					<th>Description: </th>
-					<td><textarea placeholder="255 caractères max" name="description" rows="10" cols="50" maxlength="255"></textarea>></td>
+					<td><textarea name="description" rows="10" cols="50" maxlength="64000"></textarea>></td>
 				</tr>
 				<tr>
 					<th>Prix: </th>
@@ -173,7 +173,7 @@
 				</tr>
 				<tr>
 					<th>URL Image: </th>
-					<td><input type="text" name="urlImage" size="50" maxlength="255" required="required" value="exo-circulaire\assets\img\products\"></td>
+					<td><input type="text" name="urlImage" size="50" maxlength="255" required="required" value="\exo-circulaire\assets\img\products\"></td>
 				</tr>
 				<tr>
 					<td colspan="2"><input type="submit" class="myButtonMini" id="submit"></td>

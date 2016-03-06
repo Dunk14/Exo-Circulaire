@@ -77,7 +77,7 @@
 		        					echo '<a href="index.php?c=utilisateur&a=vieworder&id_commande='.$commandes['id_commande'].'&id_utilisateur='.$commandes['id_utilisateur'].'" class="commande" style="text-decoration:none;">';
 		        					echo '<div class="orders">';
 		        					echo '<span class="order__time">'.$commandes['date_commande'].'</span>';
-		        					echo '<span class="order__price">'.$commandes['prix'].' €</span>';
+		        					echo '<span class="order__price">'.number_format($commandes['prix'], 2, ',', ' ').' €</span>';
 		        					echo '</div>';
 		        					echo '</a>';
 		        				}

@@ -16,6 +16,11 @@ h1 {
 	text-shadow: 2px 2px 4px white;
 	text-align: center;
 	margin-top: 30px;
+	box-shadow: 2px 4px 10px black;
+}
+
+#article a {
+	text-decoration: none;
 }
 
 #article h2 {
@@ -30,4 +35,28 @@ h1 {
 	display: inline-block;
 	text-align: center;
 	margin-top: 60px;
+}
+
+.addshop {
+	margin-bottom: 10px;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-color: rgba(50,50,50,0.6);
+	font-family: 'Questrial';
+	color: white;
+	text-align: center;
+	border: 1px solid rgba(235,235,235,0.4);
+	font-size: 1em;
+	text-shadow: 0px 0px 10px white;
+	transition: all 0.3s ease-in-out;
+}
+
+.addshop:hover {
+	background-color: rgba(50,50,50,0.2);
+	border: 1px solid rgba(235,235,235,0.2);
+	border-top-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	color: rgb(220,220,220);
+	box-shadow: 2px 4px 10px black;
+	text-shadow: 2px 2px 4px black;
 }

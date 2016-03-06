@@ -13,7 +13,6 @@
 			$query = 'SELECT COUNT(*) FROM clients WHERE mail = "'.$mail.'";';
 			$existMail = $this->db->get($query);
 			if ($existMail[0] == 1) {
-<<<<<<< HEAD
 				return true;
 			} else {
 				return false;
@@ -24,8 +23,6 @@
 			$query = 'SELECT COUNT(*) FROM clients WHERE mail = "'.$mail.'" AND id_client != "'.$idClient.'";';
 			$existMail = $this->db->get($query);
 			if ($existMail[0] == 1) {
-=======
->>>>>>> 4148416e195f0884eaa0a21107819f91c232a0ec
 				return true;
 			} else {
 				return false;
@@ -36,7 +33,6 @@
 			$query = 'SELECT id_client FROM clients WHERE mail = "'.$mail.'";';
 			$idClient = $this->db->get($query);
 			return $idClient;
-<<<<<<< HEAD
 		}
 
 		public function getIdUtilisateur ($pseudo) {
@@ -50,21 +46,6 @@
 			// Requête d'insertion de la table client
 			$queryUtilisateur = 'INSERT INTO clients (nom,prenom,ville,adresse,cp,mail,dateArrivee) 
 			VALUES (:nom,:prenom,:ville,:adresse,:cp,:mail,:dateArrivee);';
-=======
-		}
-
-		public function getIdUtilisateur ($pseudo) {
-			$query = 'SELECT id_utilisateur FROM utilisateurs WHERE pseudo = "'.$pseudo.'";';
-			$idUtilisateur = $this->db->get($query);
-			return $idUtilisateur;
-		}
-
-		public function addUtilisateur ($nom,$prenom,$ville,$adresse,$cp,$mail,$pseudo,$mdp) {
-
-			// Requête d'insertion de la table client
-			$queryUtilisateur = 'INSERT INTO clients (nom,prenom,ville,adresse,cp,mail) 
-			VALUES (:nom,:prenom,:ville,:adresse,:cp,:mail);';
->>>>>>> 4148416e195f0884eaa0a21107819f91c232a0ec
 
 			// Requête d'insertion de la table utilisateurs
 			$queryClient = 'INSERT INTO utilisateurs (pseudo,mdp)
@@ -146,7 +127,6 @@
 			return $resultatCommande;
 		}
 
-<<<<<<< HEAD
 		public function updateUtilisateur ($ville,$adresse,$cp,$mail,$idClient) {
 			$queryUpdate = 'UPDATE clients SET ville = "'.$ville.'", 
 			adresse = "'.$adresse.'", 
@@ -155,43 +135,58 @@
 			WHERE id_client = '.$idClient.';';
 			$resultatUpdate = $this->db->get($queryUpdate);
 			return $resultatUpdate;
-=======
 			header("Location:".$_SERVER['DOCUMENT_ROOT']."exo-circulaire/index.php");
 		}
 
-		public function connectUtilisateur ($pseudo,$mdp) {
+		public function checkMdp ($mdp) {
+			$query = 'SELECT COUNT(*) FROM utilisateurs WHERE mdp = "'.$mdp.'" AND id_utilisateur = '.$_SESSION['idUtilisateur'].';';
+			$resultat = $this->db->get($query);
+			return $resultat;
+		}
 
-			// Préparation des requêtes 
-			$queryPseudo = 'SELECT COUNT(*) FROM utilisateurs WHERE pseudo = "'.$pseudo.'";';
-			$queryMdp = 'SELECT COUNT(*) FROM utilisateurs WHERE mdp = "'.$mdp.'";';
+		public function updateMdp ($mdp) {
+			$query = 'UPDATE utilisateurs SET mdp = "'.$mdp.'" WHERE id_utilisateur = '.$_SESSION['idUtilisateur'].';';
+			$resultat = $this->db->get($query);
+			return $resultat;
+		}
 
-			// Exécution des requêtes
-			$resultatPseudo = $this->db->get($queryPseudo);
-			$resultatMdp = $this->db->get($queryMdp);
+		public function viewCommande($date_commande,$idUtilisateur) {
+			$query = 'SELECT * FROM commandes WHERE date_commande = "'.$date_commande.'" 
+			AND id_utilisateur = '.$idUtilisateur.';';
+			$resultat = $this->db->get($query);
+			return $resultat;
+		}
 
-			// Vérification de la concordance des résultats obtenus précédemment
-			if ($resultatPseudo[0] == 1 && $resultatMdp[0] == 1) {
-				require_once($_SERVER['DOCUMENT_ROOT'].'exo-circulaire/index.php');
+		public function purchase() {
+			$date_commande = date("Y-m-d H:i:s");
+			$queryCommande = 'INSERT INTO commandes (date_commande,prix,id_utilisateur) 
+			VALUES (:date_commande,:prix,:id_utilisateur);';
+			$tabCommande = array (
+				'date_commande' => $date_commande,
+				'prix' => $_SESSION['panier']['total'],
+				'id_utilisateur' => $_SESSION['idUtilisateur']
+				);
 
-				// Récupération de 'id_utilisateur'
-				$idUtilisateur = $this->getIdUtilisateur($pseudo);
+			$resultatCommande = $this->db->insert($queryCommande, $tabCommande);
 
-				// Récupération des infos de l'utilisateur/client
-				$queryForeign = 'SELECT * FROM clients WHERE id_utilisateur = '.$idUtilisateur[0].';';
-				$userConnected = $this->db->get($queryForeign);
+			// Récupération de l'id commande
+			$commande = $this->viewCommande($date_commande,$_SESSION['idUtilisateur']);
 
-				session_start();
+			for ($i=0; $i < $_SESSION['sizePanier']; $i++) { 
+				$query = 'INSERT INTO contient VALUES (:prix,:id_article,:id_commande);';
+				$tab = array (
+					'prix' => $_SESSION['panier'][$i]['prix'],
+					'id_article' => $_SESSION['panier'][$i]['id_article'],
+					'id_commande' => $commande['id_commande']
+					);
+				$resultat = $this->db->insert($query, $tab);
 
-				$_SESSION['id_utilisateur'] = $idUtilisateur;
-				$_SESSION['nom'] = $userConnected["nom"];
-				$_SESSION['prenom'] = $userConnected["prenom"];
-
-
+				$update = 'UPDATE articles SET quantite = quantite - 1 
+				WHERE id_article = '.$_SESSION['panier'][$i]['id_article'].';';
+				$resUpdate = $this->db->get($update);
 			}
-			else {
-				echo '<h2>Le pseudo et/ou le mot de passe n\'est/ne sont pas correct(s)';
-			}
->>>>>>> 4148416e195f0884eaa0a21107819f91c232a0ec
+
+			unset($_SESSION['panier'], $_SESSION['sizePanier']);
 		}
 
 	}

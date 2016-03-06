@@ -7,12 +7,72 @@
 		$controller = $_GET['c'];
 		$action = $_GET['a'];
 	}
+
 	// Liste des articles en vente
 	if ($controller == "article" && $action == "list") {
 			require_once($_SERVER['DOCUMENT_ROOT'].'exo-circulaire/controllers/article.php');
 			$controller_article = new controller_article();
 			$controller_article->listArticles();
 	}
+
+	// Ajout d'un article au panier
+	elseif ($controller == "utilisateur" && $action == "addpanier") {
+		if (empty($_GET['id_article']) || empty($_GET['nom_article']) || empty($_GET['id_desc']) || empty($_GET['prix'])) {
+			header("Location: index.php?c=article&a=list");
+			die();
+		} else {
+			$idArt = intval($_GET['id_article']);
+			$nomArticle = $_GET['nom_article'];
+			$idDesc = intval($_GET['id_desc']);
+			$prix = intval($_GET['prix']);
+			require_once($_SERVER['DOCUMENT_ROOT'].'exo-circulaire/controllers/utilisateur.php');
+			$controller_utilisateur = new controller_utilisateur();
+			$controller_utilisateur->addPanier($idArt,$nomArticle,$idDesc,$prix);
+		}
+	} 
+
+	// Suppresion d'un article au panier
+	elseif ($controller == "utilisateur" && $action == "pullpanier") {
+		if (empty($_GET['id_article'])) {
+			header("Location: index.php?c=article&a=list");
+			die();
+		} else {
+			$idArt = intval($_GET['id_article']);
+			require_once($_SERVER['DOCUMENT_ROOT'].'exo-circulaire/controllers/utilisateur.php');
+			$controller_utilisateur = new controller_utilisateur();
+			$controller_utilisateur->pullPanier($idArt);
+		}
+	} 
+
+	// Confirmation du panier
+	elseif ($controller == "utilisateur" && $action == "confirmpanier") {
+		require_once($_SERVER['DOCUMENT_ROOT'].'exo-circulaire/controllers/utilisateur.php');
+		$controller_utilisateur = new controller_utilisateur();
+		$controller_utilisateur->confirmPanier();
+	} 
+
+	// Finalisation de l'achat
+	elseif ($controller == "utilisateur" && $action == "finalizepanier") {
+		require_once($_SERVER['DOCUMENT_ROOT'].'exo-circulaire/controllers/utilisateur.php');
+		$controller_utilisateur = new controller_utilisateur();
+		$controller_utilisateur->finalizePanier();
+	} 
+
+	// Achat du panier
+	elseif ($controller == "utilisateur" && $action == "purchase") {
+		require_once($_SERVER['DOCUMENT_ROOT'].'exo-circulaire/controllers/utilisateur.php');
+		$controller_utilisateur = new controller_utilisateur();
+		$controller_utilisateur->purchase();
+	} 
+
+
+	// Connexion/Inscription pour achat
+	elseif ($controller == "utilisateur" && $action == "finalizeconnexion") {
+		require_once($_SERVER['DOCUMENT_ROOT'].'exo-circulaire/controllers/utilisateur.php');
+		$controller_utilisateur = new controller_utilisateur();
+		$controller_utilisateur->finalizeConnexion();
+	} 
+
 	// Vue d'un article en détails
 	elseif ($controller == "article" && $action == "view") {
 		if (empty($_GET['id'])) {

@@ -18,50 +18,52 @@
 	<?php foreach ($listUtilisateurs as $utilisateur) { 
 				echo '
 
-					<div class="col-xs-11 col-sm-11 col-md-6" id="utilisateur">
-						<table>
-							<tr>
-								<th>ID Utilisateur: </th>
-								<td>'.$utilisateur['id_utilisateur'].'</td>
-							</tr>
-							<tr>
-								<th>ID Client: </th>
-								<td>'.$utilisateur['id_client'].'</td>
-							</tr>
-							<tr>
-								<th>Pseudo: </th>
-								<td>'.$utilisateur['pseudo'].'</td>
-							</tr>
-							<tr>
-								<th>Prénom: </th>
-								<td>'.$utilisateur['prenom'].'</td>
-							</tr>
-							<tr>
-								<th>Nom: </th>
-								<td>'.$utilisateur['nom'].'</td>
-							</tr>
-						</table>
-						<table>
-							<tr>
-								<th>Ville: </th>
-								<td>'.$utilisateur['ville'].' '.$utilisateur['cp'].'</td>
-							</tr>
-							<tr>
-								<th>Adresse: </th>
-								<td>'.$utilisateur['adresse'].'</td>
-							</tr>
-							<tr>
-								<th>Mail: </th>
-								<td>'.$utilisateur['mail'].'</td>
-							</tr>
-							<tr>
-								<th>Date d\'inscription: </th>
-								<td>'.$utilisateur['dateArrivee'].'</td>
-							</tr>
-							<tr>
-								<td colspan="2"><a class="myButtonMini" href="index.php?c=admin&a=confirmDeleteClient&id_client='.$utilisateur['id_client'].'">Supprimer ce client</a></td>
-							</tr>
-						</table>
+					<div class="col-xs-11 col-sm-11 col-md-6">
+						<div id="utilisateur">
+							<table>
+								<tr>
+									<th>ID Utilisateur: </th>
+									<td>'.$utilisateur['id_utilisateur'].'</td>
+								</tr>
+								<tr>
+									<th>ID Client: </th>
+									<td>'.$utilisateur['id_client'].'</td>
+								</tr>
+								<tr>
+									<th>Pseudo: </th>
+									<td>'.$utilisateur['pseudo'].'</td>
+								</tr>
+								<tr>
+									<th>Prénom: </th>
+									<td>'.$utilisateur['prenom'].'</td>
+								</tr>
+								<tr>
+									<th>Nom: </th>
+									<td>'.$utilisateur['nom'].'</td>
+								</tr>
+							</table>
+							<table>
+								<tr>
+									<th>Ville: </th>
+									<td>'.$utilisateur['ville'].' '.$utilisateur['cp'].'</td>
+								</tr>
+								<tr>
+									<th>Adresse: </th>
+									<td>'.$utilisateur['adresse'].'</td>
+								</tr>
+								<tr>
+									<th>Mail: </th>
+									<td>'.$utilisateur['mail'].'</td>
+								</tr>
+								<tr>
+									<th>Date d\'inscription: </th>
+									<td>'.$utilisateur['dateArrivee'].'</td>
+								</tr>
+								<tr>
+									<td colspan="2"><a class="myButtonMini" href="index.php?c=admin&a=confirmDeleteClient&id_client='.$utilisateur['id_client'].'">Supprimer ce client</a></td>
+								</tr>
+							</table>
+						</div>
 					</div>';
 			} 
 

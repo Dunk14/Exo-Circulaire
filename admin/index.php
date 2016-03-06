@@ -59,7 +59,7 @@
 				$idArt = intval($_GET['id_art']);
 				require_once($_SERVER['DOCUMENT_ROOT'].'exo-circulaire/controllers/admin.php');
 				$controller_admin = new controller_admin();
-				$controller_admin->updateArticle($idDesc);
+				$controller_admin->updateArticle($idArt);
 			}
 		}
 
@@ -72,7 +72,7 @@
 				$idArt = intval($_GET['id_art']);
 				require_once($_SERVER['DOCUMENT_ROOT'].'exo-circulaire/controllers/admin.php');
 				$controller_admin = new controller_admin();
-				$controller_admin->deleteArticle($idDesc);
+				$controller_admin->deleteArticle($idArt);
 			}
 		}
 

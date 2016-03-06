@@ -172,6 +172,14 @@
 			$resultatUt = $this->db->get($queryUtilisateur);
 		}
 
+		// Supprime un article spécifique
+		public function deleteArticle($idArt) {
+
+			$query = 'DELETE FROM articles WHERE id_article = '.$idArt.';';
+			$resultat = $this->db->get($query);
+			return $resultat;
+		}
+
 		// Retourne l'ID_Client
 		public function getIdClient ($mail) {
 			$query = 'SELECT id_client FROM clients WHERE mail = "'.$mail.'";';
@@ -184,6 +192,23 @@
 			$query = 'SELECT id_utilisateur FROM utilisateurs WHERE pseudo = "'.$pseudo.'";';
 			$idUtilisateur = $this->db->get($query);
 			return $idUtilisateur;
+		}
+
+		// Modifie un article
+		public function updateArticle($nom,$description,$diametre,$gravity,$temperature,$lunes,$prix,$quantite,$urlImage,$idArt) {
+			$query = 'UPDATE articles 
+			SET nom = "'.$nom.'"
+			AND description = "'.$description.'"
+			AND diametre = '.$diametre.'
+			AND gravity = '.$gravity.'
+			AND temperature = '.$temperature.'
+			AND lunes = '.$lunes.'
+			AND prix = '.$prix.'
+			AND quantite = '.$quantite.'
+			AND urlImage = '.$urlImage.'
+			WHERE id_article = '.$idArt.';';
+			$resultat = $this->db->get($query);
+			return $resultat;
 		}
 
 

@@ -44,7 +44,6 @@
 			animation-timing-function: ease-in-out; }
 		}
 
-<<<<<<< HEAD
 .header__menu:hover, .header__menu:active {
 	color: white;
 	text-shadow: 0px -5px 5px black;
@@ -60,7 +59,8 @@
 	animation-direction: alternate;
 	box-shadow: 0px 0px 20px black;
 	font-weight: bold;
-=======
+}
+
  /*-- #fade { /*--Masque opaque noir de fond--
 	display: none; /*--masqué par défaut--
 	background: #000;

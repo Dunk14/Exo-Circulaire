@@ -47,7 +47,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'exo-circulaire/models/admin.php');
 
 						// On efface client/utilisateur
 						$deleteClient = $admin->deleteClient($viewClient['id_client'],$viewClient['id_utilisateur']);
-						header("Location: admin/index.php?c=utilisateur&a=list");
+						header("Location: index.php?c=utilisateur&a=list");
 						die();
 					}
 				}
@@ -161,8 +161,34 @@ require_once($_SERVER['DOCUMENT_ROOT'].'exo-circulaire/models/admin.php');
 			$admin = new Model_Admin();
 			$article = $admin->viewArticle($idArt);
 			// Affichage
+			require_once($_SERVER['DOCUMENT_ROOT'].'exo-circulaire/views/admin/updatearticle.php');
 			
-			
+			if (!empty($_POST)) {
+				$nom = htmlspecialchars($_POST['nom']);
+				$description = htmlspecialchars($_POST['description']);
+				$diametre = htmlspecialchars($_POST['diametre']);
+				$gravity = htmlspecialchars($_POST['gravity']);
+				$temperature = htmlspecialchars($_POST['temperature']);
+				$lunes = htmlspecialchars($_POST['lunes']);
+				$prix = htmlspecialchars($_POST['prix']);
+				$quantite = htmlspecialchars($_POST['quantite']);
+				$urlImage = htmlspecialchars($_POST['urlImage']);
+
+				$admin = new Model_Admin();
+				$updateArticle = $admin->updateArticle($nom,$description,$diametre,$gravity,$temperature,$lunes,$prix,$quantite,$urlImage,$idArt);
+				header("Location: index.php?c=article&a=list");
+				die();
+			}
+		}
+
+		public function deleteArticle($idArt) {
+
+			// Suppression du produit
+			$admin = new Model_Admin();
+			$deleteArticle = $admin->deleteArticle($idArt);
+			// Redirection
+		 	header("Location: exo-circulaire/views/admin/articles.php");
+		 	die();
 		}
 
 	}

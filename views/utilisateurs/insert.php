@@ -35,11 +35,7 @@
 						</tr>
 						<tr>
 							<td><label for="cp">Code Postal: </label></td>
-<<<<<<< HEAD
 							<td><input type="text" name="cp" id="cp" size="8" maxlength="5" required="required"></td>
-=======
-							<td><input type="text" name="cp" id="cp" size="5" maxlength="5" required="required"></td>
->>>>>>> 4148416e195f0884eaa0a21107819f91c232a0ec
 						</tr>
 					</table>
 					<table cellspacing="8" class="utilisateur">

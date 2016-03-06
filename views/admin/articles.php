@@ -42,11 +42,11 @@
 								<div class="col-xs-12 col-sm-12 col-md-8">
 									<h2><?php echo $article['nom']; ?></h2>
 									<ul>
-										<li>Diamètre: <?php echo $article['diametre']; ?></li>
-										<li>Gravité: <?php echo $article['gravity']; ?></li>
-										<li>Température: <?php echo $article['temperature']; ?> C°</li>
-										<li>Lunes: <?php echo $article['lunes']; ?></li>
-										<li>Quantité: <?php echo $article['quantite']; ?></li>
+										<li><strong>Diamètre:</strong> <?php echo $article['diametre']; ?> km</li>
+										<li><strong>Gravité:</strong> <?php echo $article['gravity']; ?> m/s²</li>
+										<li><strong>Température:</strong> <?php echo $article['temperature']; ?> C°</li>
+										<li><strong>Lunes:</strong> <?php echo $article['lunes']; ?></li>
+										<li><strong>Quantité:</strong> <?php echo $article['quantite']; ?></li>
 										<li><a href="index.php?c=admin&a=updateArticle&id_art=<?php echo $article['id_article'];?>"><img src="../assets/img/icons/update.png" width="32" height="32" class="update"></a> | 
 										<a href="index.php?c=admin&a=deleteArticle&id_art=<?php echo $article['id_article']; ?>"><img src="../assets/img/icons/delete.png" width="32" height="32" class="delete"></a></li>
 									</ul>

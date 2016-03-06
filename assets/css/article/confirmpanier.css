@@ -1,0 +1,139 @@
+h1 {
+	text-align: center;
+	font-size: 2.4em;
+	font-family: 'Red Moon Rising';
+	color: white;
+	text-shadow: 0px 0px 10px white;
+}
+
+#article {
+	display: flex;
+	border: 2px solid white;
+	border-radius: 20px;
+	background-color: rgba(220,220,220,0.6);
+	font-family: 'Questrial';
+	font-size: 1.3em;
+	text-shadow: 2px 2px 4px white;
+	text-align: center;
+	margin-top: 30px;
+	box-shadow: 2px 4px 10px black;
+}
+
+#article a {
+	text-decoration: none;
+}
+
+#article h2 {
+	text-align: center;
+}
+
+#article li {
+	list-style-type: none;
+}
+
+#image {
+	display: inline-block;
+	text-align: center;
+	margin-top: 60px;
+}
+
+.shoppingbasket {
+	border-radius: 8px;
+	margin-top: 30px;
+	padding-top: 5px;
+	background-color: rgba(240,240,240,0.7);
+	box-shadow: 2px 4px 10px black;
+	border: 2px solid white;
+}
+
+.shoppingbasket a {
+	text-decoration: none;
+}
+
+.shoppingbasket > h2 {
+	text-align: center;
+	font-family: 'Questrial';
+	font-size: 2.4em;
+	color: white;
+	text-shadow:1px 1px 5px black;
+	font-weight: bold;
+	margin: 20px;
+}
+
+.shoppingbasket > h1 {
+	border-style: none;
+	border-top: medium solid white;
+	border-bottom: medium solid white;
+	font-family: 'Red Moon Rising';
+	font-size: 2.2em;
+	text-align: center;
+	margin:0px;
+	text-shadow: 1px 1px 4px rgb(70,70,70);
+	color: white;
+	font-weight: bold;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f6f8+0,d8e1e7+50,b5c6d0+51,e0eff9+100;Grey+Gloss+%232 */
+	background: rgb(242,246,248); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(242,246,248,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 51%, rgba(224,239,249,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(242,246,248,1) 0%,rgba(216,225,231,1) 50%,rgba(181,198,208,1) 51%,rgba(224,239,249,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(242,246,248,1) 0%,rgba(216,225,231,1) 50%,rgba(181,198,208,1) 51%,rgba(224,239,249,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9',GradientType=0 ); /* IE6-9 */
+
+}
+
+.finalize {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cedbe9+0,aac5de+17,6199c7+50,3a84c3+51,419ad6+59,4bb8f0+71,3a8bc2+84,26558b+100;Blue+Gloss */
+	background: rgb(206,219,233); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(206,219,233,1) 0%, rgba(170,197,222,1) 17%, rgba(97,153,199,1) 50%, rgba(58,132,195,1) 51%, rgba(65,154,214,1) 59%, rgba(75,184,240,1) 71%, rgba(58,139,194,1) 84%, rgba(38,85,139,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(206,219,233,1) 0%,rgba(170,197,222,1) 17%,rgba(97,153,199,1) 50%,rgba(58,132,195,1) 51%,rgba(65,154,214,1) 59%,rgba(75,184,240,1) 71%,rgba(58,139,194,1) 84%,rgba(38,85,139,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(206,219,233,1) 0%,rgba(170,197,222,1) 17%,rgba(97,153,199,1) 50%,rgba(58,132,195,1) 51%,rgba(65,154,214,1) 59%,rgba(75,184,240,1) 71%,rgba(58,139,194,1) 84%,rgba(38,85,139,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedbe9', endColorstr='#26558b',GradientType=0 ); /* IE6-9 */
+	text-align: center;
+	margin-bottom: 10px;
+	border-style: none;
+	border-top: medium solid white;
+	border-bottom: medium solid white;
+	font-family: 'Red Moon Rising';
+	color: white;
+	font-size: 2em;
+	text-shadow: 2px 2px 4px black;
+	transition: all 0.2s ease-in-out;
+}
+
+.finalize:hover {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3b679e+0,2b88d9+50,207cca+51,7db9e8+100;Blue+Gloss+%232 */
+	background: rgb(59,103,158); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(59,103,158,1) 0%, rgba(43,136,217,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b679e', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+	text-shadow: 0px 0px 10px white;
+}
+
+.finalize__none {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f85032+0,f16f5c+50,f6290c+51,f02f17+71,e73827+100;Red+Gloss+%231 */
+	background: rgb(248,80,50); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(248,80,50,1) 0%,rgba(241,111,92,1) 50%,rgba(246,41,12,1) 51%,rgba(240,47,23,1) 71%,rgba(231,56,39,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(248,80,50,1) 0%,rgba(241,111,92,1) 50%,rgba(246,41,12,1) 51%,rgba(240,47,23,1) 71%,rgba(231,56,39,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827',GradientType=0 ); /* IE6-9 */
+	text-align: center;
+	margin-bottom: 10px;
+	border-style: none;
+	border-top: medium solid white;
+	border-bottom: medium solid white;
+	font-family: 'Red Moon Rising';
+	color: white;
+	font-size: 2em;
+	text-shadow: 2px 2px 4px black;
+	transition: all 0.2s ease-in-out;
+}
+
+.finalize__none:hover {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,6d0019+100;Brown+Red+3D */
+	background: rgb(169,3,41); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
+	text-shadow: 0px 0px 10px white;
+}
